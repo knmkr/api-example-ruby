@@ -8,9 +8,9 @@ client = HTTPClient.new
 token = 'GENOMELINKTEST'
 headers = { Authorization: "Bearer #{token}" }
 
-phenotype = 'eye-color'
+name = 'eye-color'
 population = 'european'
-report_url = "https://genomicexplorer.io/v1/reports/#{phenotype}/?population=#{population}"
+report_url = "https://genomicexplorer.io/v1/reports/#{name}/?population=#{population}"
 response = client.get(report_url, header: headers)
 puts JSON.parse(response.body)
 
